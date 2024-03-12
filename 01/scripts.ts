@@ -4,7 +4,11 @@ type Usuario = {
     cpf: string,
     rg: string
     dataNacimento?: string
-}
+};
+
+type NovoUsuario= Omit<Usuario,'rg'>;
+
+type UsuarioCorreto= Required<NovoUsuario>
 
 const cadastrarUsuário = (info: Usuario): Usuario => {
     return info;
